@@ -1,6 +1,9 @@
 # mb-palette-colors
 Mabinogi染色パレットにある色をカウントしてCSVファイルを作成します。
 
+## ファイルのダウンロード
+[こちらからCSVファイルをダウンロードできます](https://github.com/Cocoron-mb/mb-palette-colors/releases/latest)
+
 ## 簡単な説明
 CSVファイルは、1つの色につき1行で
 R(赤), G(緑), B(青), H(色相), L(輝度), S(彩度), Count(数) 
@@ -12,14 +15,16 @@ Count(数)はこれまでカウントした最大数になっています。
 > [!IMPORTANT]
 > 新しい色があったりや数が違うこともあり得ると思っています。
 
-## Google Spreadsheet で使う
-Google SpreadsheetにCSVファイルを読み込ませて
+## Googleスプレッドシートで使う
+GoogleスプレッドシートにCSVファイルを読み込ませて
 - A列の背景色をRGBに合わせて変更
 - I列に色相のグループ
 - J列に輝度のグループ
 - K列にRGBの範囲(最大値-最小値)
 
 を追加して使っています。
+
+[こんなかんじ](https://docs.google.com/spreadsheets/d/11dDPD0g-bclea3AUwqR5GCOq9M6HpD7ObkjAdniGl10/edit?usp=sharing)
 
 ### A列の背景色をRGBに合わせて変更
 
@@ -52,7 +57,7 @@ E列にある色相の値を30度づつグループにして、近しい色で�
 =ROUNDUP((F2-17)/34)
 ```
 
-G列にある輝度の値を3等分し、明るさが近い色で絞り込みやすくしています。
+G列にある輝度の値を4等分し、明るさが近い色で絞り込みやすくしています。
 
 ### K列にRGBの範囲(最大値-最小値)
 
